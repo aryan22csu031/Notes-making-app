@@ -13,7 +13,7 @@
             <form action="/create" method="post">
                 <input type="text" placeholder="Title goes here" class="block px-5 py-2 bg-zinc-800 w-full rounded-lg" name="title">
                 <textarea placeholder="Write your task here" class="block px-5 py-2 mt-2 bg-zinc-800 resize-none w-full rounded-lg" name="details"></textarea>
-                <input class="mt-2 bg-blue-800 rounded-md p-2 text-white" type="submit" value="Create Task">
+                <input class="mt-2 bg-green-800 cursor-pointer rounded-md p-2 text-white hover:bg-green-900" type="submit" value="Create Task">
             </form>
         </div>
         <div class="tasks p-10 flex gap-5 flex-wrap">
@@ -22,6 +22,7 @@
                     <div class="task w-72 px-3 py-4 rounded-md bg-zinc-800">
                         <h1 class="text-white text-3xl tracking-tighter"> <%= val %> </h1>
                         <a href="/file/<%= val %>" class="text-blue-500 inline-block mt-3">Read more...</a>
+                        <a href="/edit/<%= val %>" class="bg-yellow-600 p-2 rounded-md relative left-[3.8rem] text-black font-bold hover:bg-yellow-700">Edit Filename</a>
                     </div>
                 <% }) %>
             <% } else { %>
